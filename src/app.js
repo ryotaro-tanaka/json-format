@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchButton.addEventListener('click', () => {
         const apiUrl = apiUrlInput.value.trim();
         if (apiUrl) {
-            window.location.href = `http://127.0.0.1:8080/?apiUrl=${encodeURIComponent(apiUrl)}`;
+            // window.location.href = `http://127.0.0.1:8080/?apiUrl=${encodeURIComponent(apiUrl)}`;
+            // Get the current URL and append the apiUrl query parameter
+            const currentUrl = new URL(window.location.href);
+            currentUrl.searchParams.set('apiUrl', apiUrl);
+            window.location.href = currentUrl.toString();
         } else {
             alert('Please enter a valid API URL.');
         }
