@@ -1,0 +1,25 @@
+# Build artifacts
+bin/
+obj/
+dist/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Logs
+*.log
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Dependency directories
+packages/
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
