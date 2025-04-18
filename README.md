@@ -5,13 +5,15 @@ This is a web application designed to format and display JSON output from a WebA
 ## Project Structure
 
 ```
-json-format
-├── src
-│   ├── index.html        # Main HTML document for the web application
-│   ├── app.js           # JavaScript code to fetch and display job listings
-│   └── styles.css       # CSS styles for the web application
-├── package.json          # npm configuration file
-└── README.md             # Project documentation
+.
+├── LICENSE
+├── README.md
+├── package-lock.json
+├── package.json
+└── src
+    ├── app.js           # JavaScript code to fetch and display job listings
+    ├── index.html       # Main HTML document for the web application
+    └── styles.css       # CSS styles for the web application
 ```
 
 ## Getting Started
