@@ -42,10 +42,17 @@ To set up and run the application, follow these steps:
    http://127.0.0.1:8080/
    ```
 
+## Purpose
+
+This app was created to format JSON output from a WebAPI during development, especially when accessing localhost is not possible from hosting services. 
+
+If you already have a WebAPI with a public URL, you can view the formatted JSON at:
+[https://ryotaro-tanaka.github.io/json-format/src/index.html](https://ryotaro-tanaka.github.io/json-format/src/index.html)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contributing。
+## Contributing
 
 Feel free to submit issues or pull requests for improvements or bug fixes.
