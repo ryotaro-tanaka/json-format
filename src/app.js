@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const apiUrl = urlParams.get('apiUrl');
 
+    // Set the input field value to the apiUrl query parameter
     if (apiUrl) {
+        apiUrlInput.value = apiUrl;
         console.log(`Fetching data from ${apiUrl}...`);
         fetch(apiUrl)
             .then(response => {
