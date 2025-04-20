@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchButton = document.getElementById('fetch-button');
     const apiUrlInput = document.getElementById('api-url');
 
+    // Set focus to the apiUrlInput element on page load
+    apiUrlInput.focus();
+
     // Add event listener to fetch-button to reload the page with the apiUrl query parameter
     fetchButton.addEventListener('click', () => {
         const apiUrl = apiUrlInput.value.trim();
