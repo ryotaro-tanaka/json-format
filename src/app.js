@@ -32,8 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 console.log('Data fetched successfully:', data);
 
-                // Format JSON data and display it inside a <pre> tag
-                const formattedJson = JSON.stringify(data, null, 4);
+                // Escape HTML tags in JSON data
+                const escapeHtml = (str) => {
+                    return str.replace(/[&<>"']/g, (char) => {
+                        const escapeChars = {
+                            '&': '&amp;',
+                            '<': '&lt;',
+                            '>': '&gt;',
+                            '"': '&quot;',
+                            "'": '&#39;'
+                        };
+                        return escapeChars[char];
+                    });
+                };
+
+                // Format JSON data and escape HTML tags
+                const formattedJson = JSON.stringify(data, null, 4)
+                    .replace(/[&<>"']/g, (char) => escapeHtml(char));
+
                 outputContainer.innerHTML = `<pre>${formattedJson}</pre>`;
             })
             .catch(error => {
