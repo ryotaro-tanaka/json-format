@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Add event listener to trigger fetchButton click on Enter key press
+    apiUrlInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            fetchButton.click();
+        }
+    });
+
     // Extract the apiUrl query parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const apiUrl = urlParams.get('apiUrl');
